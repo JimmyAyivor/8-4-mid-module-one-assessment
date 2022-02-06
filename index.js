@@ -97,15 +97,11 @@ function filterByCountMinimum(animals, minimum) {
 function getMostCommonAnimal(animals) {
   let highestAnimalCount = 0;
   let highestAnimalObj = null;
-  for (let i = 1; i < animals.length; i++) {
+  for (let i = 0; i < animals.length; i++) {
     if (highestAnimalCount < animals[i].count) {
       highestAnimalCount = animals[i].count
       highestAnimalObj = animals[i];
-
-    } else if (animals.length < 1 || animals == undefined) {
-      highestAnimalObj = null;
-    }
-
+    } 
   }
   return highestAnimalObj
 }
